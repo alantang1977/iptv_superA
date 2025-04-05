@@ -1,25 +1,24 @@
 {
-    "epg_url": "https://epg.112114.xyz/pp.xml",
+  "sources": [
+    "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV-AI/main/output/channels.m3u",
+    "http://aktv.space/live.m3u"
+  ],
+  "tvbox": {
+    "enable": true,
     "catchup": {
-        "enable": true,
-        "days": 7,
-        "format": "playseek={utc:YmdHMS}-{utcend:YmdHMS}"
+      "enable": true,
+      "days": 7,
+      "template": "playseek={utc:YmdHMS}-{utcend:YmdHMS}"
     },
+    "epg": "https://epg.112114.xyz/pp.xml"
+  },
+  "performance": {
     "threads": 8,
-    "timeout": 15,
-    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
-    "sources": [
-        {
-            "name": "官方源",
-            "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
-            "type": "m3u",
-            "priority": 100
-        },
-        {
-            "name": "自定义源",
-            "url": "config/custom_sources.txt",
-            "type": "txt",
-            "priority": 90
-        }
-    ]
+    "timeout": 15
+  },
+  "filters": {
+    "remove_duplicates": true,
+    "min_duration": 10,
+    "allowed_extensions": [".m3u8", ".flv", ".mp4"]
+  }
 }
