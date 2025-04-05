@@ -1,0 +1,3 @@
+CCTV-1 综合,#http://example.com/cctv1.m3u8
+CCTV-5 体育,#http://example.com/cctv5.m3u8
+卫视高清,#http://example.com/weishi.m3u8
